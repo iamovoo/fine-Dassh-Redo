@@ -20,10 +20,10 @@
         </div>
       </div>
       <div class="shadow-xl mt-5 w-80 rounded-md flex gap-3 p-4"> 
-        <div class="w-10 overflow-hidden ">
-         <a href="" target="_blank"><img src="" alt="" class="w-32 opacity-70 object-contain"></img></a>
-       </div>
-      <h2 class=" font-bold text-md text-red-500 hover:underline hover:text-blue-500 active:opacity-70 pt-3 "><a href=" " target="_blank">click for a YouTube Tutorial</a></h2>
+        <!-- <div class="w-10 overflow-hidden ">
+         <a :href="recipe.strYoutube" target="_blank"><img src="" alt="" class="w-32 opacity-70 object-contain"></img></a>
+       </div> -->
+      <h2 class=" font-bold text-md text-red-500 hover:underline hover:text-blue-500 active:opacity-70 pt-3 "><a :href="recipe.strYoutube" target="_blank">click for a YouTube Tutorial</a></h2>
     </div>
     </div>
       <div class="grid grid-cols-4 ">

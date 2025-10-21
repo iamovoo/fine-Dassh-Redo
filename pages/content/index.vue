@@ -120,12 +120,12 @@ const countries = ref('')
 const activeTab = ref('Category')
 
 
-const {data , refresh , error} = await useFetch(`${url}/random.php`)
+const {data ,refresh, error} = await useFetch(`${url}/random.php`)
   randomFood.value = await data.value?.meals[0];
   console.log(randomFood.value)
 
-const randomize = ()=>{
-  refresh()
+const randomize = async ()=>{
+refresh()
 }
 const {data:meal} = await useFetch(`${url}/filter.php?i=beef`)
 const date = new Date()

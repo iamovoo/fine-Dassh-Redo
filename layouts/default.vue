@@ -12,8 +12,8 @@
         </div>
       </div>
     <div class="control mr-8" @click=" searchedFoodClicked">
-      <nuxt-link to="/saved"><p class="text-xl text-white font-semibold hover:opacity-75 hover:underline">Saved</p></nuxt-link>
-      <nuxt-link to="/content"><button class="btn text-xl text-white font-semibold hover:opacity-75 hover:underline" >Home</button></nuxt-link>
+      <nuxt-link to="/content"><button class="btn text-xl text-white font-bold hover:opacity-75 hover:underline" >Home</button></nuxt-link>
+      <nuxt-link to="/saved"><p class="text-xl text-white font-bold hover:opacity-75 hover:underline">Saved</p></nuxt-link>
       <div class="user gap-2">
       <div class="shadow-lg p-2 rounded-full bg-green-800 ">
         <img width="30" height="30" src="https://img.icons8.com/material-rounded/50/1A1A1A/user.png" alt="user"/></div>

@@ -1,8 +1,8 @@
 <template>
-
-<div class=" p-14  grid grid-cols-3 rounded-xl border-2 border-black">
+ <p class=" text-4xl pt-20 px-14 text-green-800 font-bold "> <nuxt-link to="/content" class=" text-4xl pt-16 font-serif  text-green-800 font-bold hover:opacity-80">Home</nuxt-link><span class=" text-4xl pt-16 text-green-800 font-bold"> / </span><span class=" hover:opacity-80 text-4xl pt-16 text-green-800 font-bold">Category</span> </p>
+<div class=" pt-6 px-14  grid grid-cols-3 rounded-xl border-2 border-black">
   <div v-for="food in category">
-   <div class=" shadow-xl p-6 container w-42 border border-black rounded-2xl mt-10 ">
+   <div class=" shadow-xl p-6 container w-42 border border-black rounded-2xl mt-8">
      <nuxt-link :to="`/content/${food?.idMeal}`">
       <div class=" overflow-hidden rounded-2xl">
           <img :src="food.strMealThumb" alt="" class=" object cover w-56">

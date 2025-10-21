@@ -2,9 +2,11 @@
 <div class=" p-14 grid grid-cols-3 rounded-xl">
   <div v-for="recipe in savedRecipies" :key="recipe.idRecipe">
    <div class=" shadow-xl p-8 container w-42 h-38 " v-if="food">
+    <nuxt-link :to="`/content/${recipe?.idRecipe}`">
       <div class=" overflow-hidden rounded-2xl">
         <img :src="recipe.image" alt="" class=" object cover w-56">
       </div>
+    </nuxt-link>
       <div class=" shadow-lg p-4 rounded-2xl">
         <div class="">
           <p class="text-emerald-800 font-bold bg-opacity-80 w-89 py-1 text-xl w-64 truncate">{{recipe.name}}</p>
