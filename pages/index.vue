@@ -4,7 +4,7 @@
     <h1 class="text-3xl font-bold text-lime-400 mb-2">Welcome {{user}}</h1>
     <p class="text-lime-400 mb-4">Enter your name to explore amazing recipes</p>
     <form @submit.prevent="getUsername" class="flex gap-2 justify-center">
-      <input type="text" v-model="usernameInp" placeholder="Your name" class="px-4 py-2 rounded-lg border-none bg-green-700 text-lime-400 placeholder:text-lime-200 w-96"/>
+      <input type="text" v-model="usernameInp" placeholder="Your name" class="px-4 py-2 rounded-lg border-none bg-green-700 text-lime-400 placeholder:text-lime-200 w-96 h-10"/>
       <button type="submit" class="bg-greeb-500 hover:bg-green-600 text-lime-400 shadow-2xl font-semibold px-4 py-2 rounded-lg border-lime-400 border">Start &#8593;</button>
     </form>
   </div>
