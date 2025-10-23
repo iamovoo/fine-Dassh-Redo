@@ -124,12 +124,11 @@ const activeTab = ref('Category')
 
 
 const {data, refresh, error} = await useFetch(`${url}/random.php`)
-  randomFood.value = await data.value?.meals[0];
+watchEffect( ()=>{
+  randomFood.value = data.value?.meals[0];
   console.log(randomFood.value)
-
-// const randomize = async ()=>{
-// await refresh()
-// }
+    console.log( `new value : ${randomFood.value}`)
+})
 const {data:meal} = await useFetch(`${url}/filter.php?i=beef`)
 const date = new Date()
 console.log(date.getDay())
