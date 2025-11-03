@@ -14,7 +14,7 @@
           <button class="text-white bg-gray-300 bg-opacity-60 px-2 rounded-2xl font-bold hover:scale-105 active:scale-110 text-sm">{{ recipe?.strCategory}}</button>
         </div>
         <div>
-          <button class="text-white bg-gray-300 bg-opacity-60 px-2  rounded-2xl font-bold hover:scale-105 active:scale-110" @click="favourite(recipe.idMeal)">❤</button>
+          <button class="text-white bg-gray-300 bg-opacity-60 px-2  rounded-2xl font-bold hover:scale-105 active:scale-110" @click="favourite(recipe)">❤</button>
         </div>
         </div>
       </div>
@@ -52,9 +52,13 @@ for (let i = 1 ; i <= 20 ; i++){
   }
 }
 console.log(data , data.value.meals[0]);
-const saved = useCookie('saved', {default:()=>''})
-  const favourite = (id)=>{
-   saved.value = id
+
+const saved = useState('saved',()=>[])
+const favourite = (meal)=>{
+  saved.value.push(meal)
+  console.log(saved.value)
+ const fav = [...JSON.parse(localStorage.getItem('saved')),meal]
+  localStorage.setItem('saved',JSON.stringify(fav))
 }
 </script>
 

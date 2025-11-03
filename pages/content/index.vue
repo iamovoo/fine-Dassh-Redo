@@ -32,7 +32,7 @@
         </div>
         </nuxt-link>
         <div   >
-          <button class="text-white bg-gray-300 bg-opacity-60 px-2  text-xs rounded-2xl font-bold hover:scale-105 active:scale-110" @click="favourite(randomFood?.idMeal)">❤</button>
+          <button class="text-white bg-gray-300 bg-opacity-60 px-2  text-xs rounded-2xl font-bold hover:scale-105 active:scale-110" @click="favourite(randomFood)">❤</button>
         </div>
      </div>
     </div>
@@ -114,6 +114,7 @@
 </footer>
 </template>
 <script setup>
+// import { useStorage } from "@vueuse/core"
 const url = 'https://www.themealdb.com/api/json/v1/1'
 const randomFood = ref('')
 const category = ref('')
@@ -172,9 +173,10 @@ const isActive= (name)=>{
     return 'bg-green-900'
   }
 }  
-const saved = useCookie('saved', {default:()=>''})
-  const favourite = (id)=>{
-   saved.value = id
+const saved = useState('saved', ()=>[])
+const favourite = (meal)=>{
+  saved.value.push(meal)
+  localStorage.setItem('saved',JSON.stringify(saved.value))
 }
 </script>
 
